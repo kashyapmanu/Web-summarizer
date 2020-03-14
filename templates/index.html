@@ -1,35 +1,41 @@
-{% extends 'base.html' %}
-
-{% block body %}
+{% extends 'base.html' %} {% block body %}
 
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light" style="background: rgba(255, 255, 255, 0.5);">
+<nav
+  class="navbar navbar-light bg-light"
+  style="background: rgba(255, 255, 255, 0.5);"
+>
   <a class="navbar-brand" href="https://web-summarizer.herokuapp.com/">
-
     Web Summarizer
   </a>
-<span class="navbar-text">
-      <a href="https://github.com/kashyapmanu/Text-summarisation-using-Natural-Language-processing-toolkit/blob/master/Text%20Summarization%20using%20NLTK%20(1).ipynb">Source Code--></a>
-    </span>
+  <span class="navbar-text">
+    <a
+      href="https://github.com/kashyapmanu/Text-summarisation-using-Natural-Language-processing-toolkit/blob/master/Text%20Summarization%20using%20NLTK%20(1).ipynb"
+      >Source Code--></a
+    >
+  </span>
 </nav>
 
-    <br>
-    <br>
-     <center><p><font face="verdana" color="white" size="5">Try it!</font></p></center>
+<br />
+<br />
+<center>
+  <p><font face="verdana" color="white" size="5">Try it!</font></p>
+</center>
 
-    <center>
-
-    <form method="POST">
-
-
-
-                <input type="text" name="url" class="form-control" style="width: 400px;position: center" placeholder="Enter a URL">
-                <br>
-                <button class="btn btn-primary" type="submit">Summarize</button>
-                </form>
-
-    </center>
-    {% if summary !=  "" %}
+<center>
+  <form method="POST">
+    <input
+      type="text"
+      name="url"
+      class="form-control"
+      style="width: 400px;position: center"
+      placeholder="Enter a URL"
+    />
+    <br />
+    <button class="btn btn-primary" type="submit">Summarize</button>
+  </form>
+</center>
+{% if summary != "" %}
 <div class="card" style="margin-left: 15px;margin-right: 15px">
   <div class="card-header">
     Summary
@@ -38,42 +44,63 @@
     <p class="card-text">{{ summary }}</p>
   </div>
 </div>
-    {% endif %}
-    <br>
-    <center><p><font face="verdana" color="white" size="5">What we use!</font></p></center>
-    <div class="card-deck" style="margin-right: 10px;margin-left: 10px">
+{% endif %}
+<br />
+<center>
+  <p><font face="verdana" color="white" size="5">What we use!</font></p>
+</center>
+<div class="card-deck" style="margin-right: 10px;margin-left: 10px">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Heroku</h5>
-      <p class="card-text">Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.</p>
+      <p class="card-text">
+        Heroku is a cloud platform as a service supporting several programming
+        languages. One of the first cloud platforms, Heroku has been in
+        development since June 2007, when it supported only the Ruby programming
+        language, but now supports Java, Node.js, Scala, Clojure, Python, PHP,
+        and Go.
+      </p>
     </div>
     <div class="card-footer">
-      <small class="text-muted"><a href="https://www.heroku.com/">Know More</a> </small>
+      <small class="text-muted"
+        ><a href="https://www.heroku.com/">Know More</a>
+      </small>
     </div>
   </div>
   <div class="card">
-
     <div class="card-body">
       <h5 class="card-title">NLTK</h5>
-      <p class="card-text">The Natural Language Toolkit, or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing for English written in the Python programming language.</p>
+      <p class="card-text">
+        The Natural Language Toolkit, or more commonly NLTK, is a suite of
+        libraries and programs for symbolic and statistical natural language
+        processing for English written in the Python programming language.
+      </p>
     </div>
     <div class="card-footer">
-      <small class="text-muted"><a href="https://www.nltk.org/">Know More</a></small>
+      <small class="text-muted"
+        ><a href="https://www.nltk.org/">Know More</a></small
+      >
     </div>
   </div>
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Flask</h5>
-      <p class="card-text">Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.</p>
+      <p class="card-text">
+        Flask is a micro web framework written in Python. It is classified as a
+        microframework because it does not require particular tools or
+        libraries. It has no database abstraction layer, form validation, or any
+        other components where pre-existing third-party libraries provide common
+        functions.
+      </p>
     </div>
     <div class="card-footer">
-      <small class="text-muted"><a href="https://palletsprojects.com/p/flask/">Know More</a></small>
+      <small class="text-muted"
+        ><a href="https://palletsprojects.com/p/flask/">Know More</a></small
+      >
     </div>
   </div>
 </div>
 
-    <br>
-
-
+<br />
 
 {% endblock %}
